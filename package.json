@@ -1,0 +1,45 @@
+{
+  "name": "@niivue/minc-loader",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./build/loader.js"
+    }
+  },
+  "types": "./build/loader.d.ts",
+  "files": [
+    "build"
+  ],
+  "keywords": [
+    "minc",
+    "vox",
+    "loader",
+    " Medical Imaging NetCDF",
+    "niivue"
+  ],
+  "author": "NiiVue developers",
+  "license": "BSD-2-Clause",
+  "description": "A MINC voxel image loader to be used with the NiiVue useLoader method",
+  "scripts": {
+    "cli": "node ./src/minc2nii.js ./tests/testData/ax2.mnc",
+    "dev": "vite",
+    "build:demo": "vite build",
+    "build": "tsup",
+    "preview": "vite preview",
+    "test": "vitest",
+    "pretty": "prettier --write \"**/*.{ts,js}\"",
+    "pub": "npm run build && npm publish --access public"
+  },
+  "dependencies": {
+    "nifti-reader-js": "^0.7.1"
+  },
+  "devDependencies": {
+    "@niivue/niivue": "^0.55.0",
+    "prettier": "^3.5.3",
+    "tsup": "^8.4.0",
+    "typescript": "^5.5.3",
+    "vite": "^6.0.5",
+    "vitest": "^2.1.8"
+  }
+}
