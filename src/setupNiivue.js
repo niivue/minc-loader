@@ -8,7 +8,7 @@ export async function setupNiivue(element) {
   nv.useLoader(mnc2nii, 'mnc', 'nii')
   await nv.loadImages([
     {
-      url: '/ax.mnc'
+      url: './ax.mnc'
     }
   ])
 }
